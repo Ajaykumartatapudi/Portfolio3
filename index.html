@@ -2,623 +2,397 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tatapudi ajay kumar - Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        body {
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tatapudi Ajay Kumar - Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+    }
 
-        .hero-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-        }
+    .hero-section {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
 
-        .navbar {
-            transition: all 0.3s ease;
-        }
+    .navbar {
+      transition: all 0.3s ease;
+    }
 
-        .navbar-scrolled {
-            background-color: rgba(255, 255, 255, 0.95) !important;
-            backdrop-filter: blur(10px);
-        }
+    .navbar-scrolled {
+      background-color: rgba(255, 255, 255, 0.95) !important;
+      backdrop-filter: blur(10px);
+    }
 
-        .navbar-scrolled .navbar-nav .nav-link {
-            color: #333 !important;
-        }
+    .navbar-scrolled .navbar-nav .nav-link {
+      color: #333 !important;
+    }
 
-        .profile-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            border: 5px solid rgba(255, 255, 255, 0.3);
-            object-fit: cover;
-        }
+    .profile-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 5px solid rgba(255, 255, 255, 0.3);
+      object-fit: cover;
+    }
 
-        .skill-bar {
-            background-color: #e9ecef;
-            border-radius: 10px;
-            overflow: hidden;
-            margin-bottom: 1rem;
-        }
+    .skill-bar {
+      background-color: #e9ecef;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
 
-        .skill-progress {
-            height: 10px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            border-radius: 10px;
-            transition: width 2s ease-in-out;
-        }
+    .skill-progress {
+      height: 10px;
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      border-radius: 10px;
+      transition: width 2s ease-in-out;
+    }
 
-        .project-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: none;
-            border-radius: 15px;
-            overflow: hidden;
-        }
+    .project-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: none;
+      border-radius: 15px;
+      overflow: hidden;
+    }
 
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
 
-        .project-img {
-            height: 200px;
-            background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: white;
-        }
+    .project-img {
+      height: 200px;
+      background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: white;
+    }
 
-        .contact-form {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 15px;
-            padding: 2rem;
-            color: white;
-        }
+    .contact-form {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 15px;
+      padding: 2rem;
+      color: white;
+    }
 
-        .btn-primary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border: none;
-            border-radius: 25px;
-            padding: 10px 30px;
-            transition: all 0.3s ease;
-        }
+    .btn-primary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border: none;
+      border-radius: 25px;
+      padding: 10px 30px;
+      transition: all 0.3s ease;
+    }
 
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
-        }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+    }
 
-        .section-title {
-            position: relative;
-            display: inline-block;
-            margin-bottom: 3rem;
-        }
+    .section-title {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 3rem;
+    }
 
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 3px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            border-radius: 2px;
-        }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 3px;
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      border-radius: 2px;
+    }
 
-        .social-links a {
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            text-align: center;
-            line-height: 50px;
-            color: white;
-            margin: 0 10px;
-            transition: all 0.3s ease;
-        }
+    .social-links a {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      text-align: center;
+      line-height: 50px;
+      color: white;
+      margin: 0 10px;
+      transition: all 0.3s ease;
+    }
 
-        .social-links a:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-3px);
-            color: white;
-        }
+    .social-links a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-3px);
+      color: white;
+    }
 
-        .timeline {
-            position: relative;
-            padding-left: 2rem;
-        }
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+    }
 
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(180deg, #667eea, #764ba2);
-        }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, #667eea, #764ba2);
+    }
 
-        .timeline-item {
-            position: relative;
-            margin-bottom: 2rem;
-            padding-left: 2rem;
-        }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2rem;
+      padding-left: 2rem;
+    }
 
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -6px;
-            top: 0;
-            width: 12px;
-            height: 12px;
-            background: #667eea;
-            border-radius: 50%;
-            border: 3px solid white;
-        }
-    </style>
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -6px;
+      top: 0;
+      width: 12px;
+      height: 12px;
+      background: #667eea;
+      border-radius: 50%;
+      border: 3px solid white;
+    }
+  </style>
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: transparent;">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#home">Portfolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#experience">Experience</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1 class="display-4 fw-bold mb-3">Hi, I'm Ajay Kumar</h1>
-                    <h3 class="mb-4">UI/UX Developer & Designer</h3>
-                    <p class="lead mb-4">I create beautiful, functional websites and applications that deliver
-                        exceptional user experiences.</p>
-                    <div class="social-links mb-4">
-                        <a href="https://www.linkedin.com/in/ajaykumar-tatapudi-b57788244/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-                        <!-- <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a> -->
-                        <a href="https://www.behance.net/tatapudajaykumar" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-behance"></i>
-                    </div>
-                    <a href="#contact" class="btn btn-primary btn-lg me-3">Get In Touch</a>
-                    <a href="#projects" class="btn btn-outline-light btn-lg">View My Work</a>
-                </div>
-                <div class="col-lg-6 text-center">
-                    <div class="profile-img mx-auto"
-                        style="background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; width: 300px; height: 300px; border-radius: 50%; overflow: hidden;">
-                        <img src="./images/ajay.jpeg" alt="Ajay Kumar"
-                            style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-5 text-center">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <p class="lead mb-4">Hello, I'm Ajay Kumar — a passionate UI/UX Developer & Designer dedicated to creating
-                user-friendly and visually engaging digital experiences.</p>
-            <p>I bring fresh ideas and hands-on experience in Figma, Adobe XD, HTML, CSS, and responsive design. I love
-                turning ideas into clean, intuitive interfaces that users enjoy.</p>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-5 bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h2 class="section-title">Skills & Expertise</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <h4 class="mb-4">Technical Skills</h4>
-                    <div class="skill-item mb-4">
-                        <div class="d-flex justify-content-between mb-2">
-                            <span>HTML</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="90"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item mb-4">
-                        <div class="d-flex justify-content-between mb-2">
-                            <span>CSS</span>
-                            <span>95%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="95"></div>
-                        </div>
-                    </div>
-                    <!-- <div class="skill-item mb-4">
-                        <div class="d-flex justify-content-between mb-2">
-                            <span>Node.js / Express</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="85"></div>
-                        </div>
-                    </div> -->
-                    <div class="skill-item mb-4">
-                        <div class="d-flex justify-content-between mb-2">
-                            <span>JavaScript/React</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="80"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <h4 class="mb-4">Design & Tools</h4>
-                    <div class="skill-item mb-4">
-                        <div class="d-flex justify-content-between mb-2">
-                            <span>UI/UX Design</span>
-                            <span>88%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="88"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item mb-4">
-                        <div class="d-flex justify-content-between mb-2">
-                            <span>Figma / Adobe XD</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="85"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item mb-4">
-                        <div class="d-flex justify-content-between mb-2">
-                            <span>Git / GitHub</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="90"></div>
-                        </div>
-                    </div>
-                    <!-- <div class="skill-item mb-4">
-                        <div class="d-flex justify-content-between mb-2">
-                            <span>Database Design</span>
-                            <span>75%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="75"></div>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-<section id="projects" class="py-5">
-  <div class="container text-center">
-    <h2 class="section-title">Featured Projects</h2>
-    <p class="lead">Some of my recent work</p>
-    <div class="row">
-
-      <!-- Hotel Booking Website -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="project-card">
-          <div class="project-img"><i class="fas fa-hotel"></i></div>
-          <div class="p-4">
-            <h5>Hotel Booking Website</h5>
-            <p>
-              A responsive web application that helps users search, compare, and book hotels easily. 
-              Integrated with APIs for hotel listings and developed using React, JavaScript, Bootstrap, and HTML.
-            </p>
-            <span class="badge bg-primary me-1">React</span>
-            <span class="badge bg-primary me-1">JavaScript</span>
-            <span class="badge bg-primary me-1">Bootstrap</span>
-            <span class="badge bg-primary me-1">HTML</span>
-          </div>
-        </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: transparent;">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home">Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
       </div>
-
-      <!-- Travel & Hotel Booking (UI Design) -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="project-card">
-          <div class="project-img"><i class="fas fa-plane"></i></div>
-          <div class="p-4">
-            <h5>Travel App UI Design</h5>
-            <p>
-              Designed a modern travel app UI in Figma for users to explore destinations and book hotels with ease. 
-              Focused on user experience, color harmony, and layout consistency.
-            </p>
-            <span class="badge bg-primary me-1">Figma</span>
-            <span class="badge bg-primary me-1">Wireframing</span>
-            <span class="badge bg-primary me-1">Prototyping</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Cat Gallery -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="project-card">
-          <div class="project-img"><i class="fas fa-cat"></i></div>
-          <div class="p-4">
-            <h5>Cat Gallery</h5>
-            <p>
-              A fun gallery app that fetches random cat images using an external API, 
-              showcasing dynamic rendering and component-based React architecture.
-            </p>
-            <span class="badge bg-primary me-1">HTML</span>
-            <span class="badge bg-primary me-1">Bootstrap</span>
-            <span class="badge bg-primary me-1">React</span>
-          </div>
-        </div>
-      </div>
-
     </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h1 class="display-4 fw-bold mb-3">Hi, I'm Ajay Kumar</h1>
+          <h3 class="mb-4">UI/UX Developer & Designer</h3>
+          <p class="lead mb-4">I create beautiful, functional websites and applications that deliver exceptional user
+            experiences.</p>
+          <div class="social-links mb-4">
+            <a href="https://www.linkedin.com/in/ajaykumar-tatapudi-b57788244/" target="_blank"><i
+                class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.behance.net/tatapudajaykumar" target="_blank"><i class="fab fa-behance"></i></a>
+          </div>
+          <a href="#contact" class="btn btn-primary btn-lg me-3">Get In Touch</a>
+          <a href="#projects" class="btn btn-outline-light btn-lg">View My Work</a>
+        </div>
+        <div class="col-lg-6 text-center">
+          <div class="profile-img mx-auto"
+            style="background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; width: 300px; height: 300px; border-radius: 50%; overflow: hidden;">
+            <img src="./images/ajay.jpeg" alt="Ajay Kumar" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-5 text-center">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p class="lead mb-4">Hello, I'm Ajay Kumar — a passionate UI/UX Developer & Designer dedicated to creating
+        user-friendly and visually engaging digital experiences.</p>
+      <p>I completed a certified <strong>UI/UX Developer Course</strong> at <strong>Tech Mahindra SMART Academy for
+          Digital Technologies</strong>, where I learned Figma, Adobe XD, HTML, CSS, and responsive front-end design. I
+        love transforming ideas into clean, intuitive interfaces that enhance usability and delight users.</p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="section-title">Skills & Expertise</h2>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h4 class="mb-4">Technical Skills</h4>
+          <div class="skill-item mb-4">
+            <div class="d-flex justify-content-between mb-2"><span>HTML</span><span>90%</span></div>
+            <div class="skill-bar"><div class="skill-progress" data-width="90"></div></div>
+          </div>
+          <div class="skill-item mb-4">
+            <div class="d-flex justify-content-between mb-2"><span>CSS</span><span>95%</span></div>
+            <div class="skill-bar"><div class="skill-progress" data-width="95"></div></div>
+          </div>
+          <div class="skill-item mb-4">
+            <div class="d-flex justify-content-between mb-2"><span>JavaScript/React</span><span>80%</span></div>
+            <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <h4 class="mb-4">Design & Tools</h4>
+          <div class="skill-item mb-4">
+            <div class="d-flex justify-content-between mb-2"><span>UI/UX Design</span><span>88%</span></div>
+            <div class="skill-bar"><div class="skill-progress" data-width="88"></div></div>
+          </div>
+          <div class="skill-item mb-4">
+            <div class="d-flex justify-content-between mb-2"><span>Figma / Adobe XD</span><span>85%</span></div>
+            <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
+          </div>
+          <div class="skill-item mb-4">
+            <div class="d-flex justify-content-between mb-2"><span>Git / GitHub</span><span>90%</span></div>
+            <div class="skill-bar"><div class="skill-progress" data-width="90"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-5">
+    <div class="container text-center">
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="lead">Some of my recent work</p>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="project-card">
+            <div class="project-img"><i class="fas fa-hotel"></i></div>
+            <div class="p-4">
+              <h5>Hotel Booking Website</h5>
+              <p>A responsive web app where users can search, compare, and book hotels easily — built using React, JS,
+                and Bootstrap.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="project-card">
+            <div class="project-img"><i class="fas fa-plane"></i></div>
+            <div class="p-4">
+              <h5>Travel App UI Design</h5>
+              <p>Designed a modern travel app UI in Figma focusing on usability, layout consistency, and accessibility.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="project-card">
+            <div class="project-img"><i class="fas fa-cat"></i></div>
+            <div class="p-4">
+              <h5>Cat Gallery</h5>
+              <p>A fun gallery app using React that fetches random cat images from an API, showcasing dynamic rendering.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="section-title">Experience & Training</h2>
+    </div>
+    <div class="container">
+      <div class="timeline">
+        <div class="timeline-item">
+          <h5 class="fw-bold">UI/UX Developer Course</h5>
+          <p class="text-muted mb-2">Tech Mahindra SMART Academy for Digital Technologies</p>
+          <ul class="list-unstyled">
+            <li>• Completed a professional UI/UX Developer course focused on modern design principles and front-end
+              development.</li>
+            <li>• Gained hands-on experience in Figma, Adobe XD, HTML, CSS, and JavaScript.</li>
+            <li>• Learned wireframing, prototyping, and responsive interface design aligned with industry standards.</li>
+            <li>• Worked on real-world projects improving user experience and accessibility.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-5">
+    <div class="container text-center">
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="lead mb-5">Have a project in mind? Let's bring your ideas to life!</p>
+    </div>
+    <div class="container">
+      <div class="contact-form mx-auto" style="max-width: 700px;">
+        <form id="contactForm">
+          <div class="row">
+            <div class="col-md-6 mb-3"><input type="text" class="form-control" id="name" placeholder="Name" required>
+            </div>
+            <div class="col-md-6 mb-3"><input type="email" class="form-control" id="email" placeholder="Email" required>
+            </div>
+          </div>
+          <div class="mb-3"><input type="text" class="form-control" id="subject" placeholder="Subject" required></div>
+          <div class="mb-3"><textarea class="form-control" id="message" rows="5" placeholder="Message"
+              required></textarea></div>
+          <button type="submit" class="btn btn-light btn-lg w-100">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+<div class="row mt-5">
+  <div class="col-md-4 text-center mb-4">
+      <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+          style="width: 60px; height: 60px;">
+          <i class="fas fa-map-marker-alt"></i>
+      </div>
+      <h5>Address</h5>
+      <p>Samalkota<br>India</p>
   </div>
-</section>
+  <div class="col-md-4 text-center mb-4">
+      <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+          style="width: 60px; height: 60px;">
+          <i class="fas fa-phone"></i>
+      </div>
+      <h5>Phone</h5>
+      <p>+91 9398800582</p>
+  </div>
+  <div class="col-md-4 text-center mb-4">
+      <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+          style="width: 60px; height: 60px;">
+          <i class="fas fa-envelope"></i>
+      </div>
+      <h5>Email</h5>
+      <p>ajaykumar298901@gmail.com</p>
+  </div>
+</div>
 
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p class="mb-0">&copy; 2025 Ajay Kumar. All rights reserved.</p>
+    </div>
+  </footer>
 
-
-    <!-- Experience Section -->
-    <section id="experience" class="py-5 bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h2 class="section-title">Experience</h2>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <h5 class="fw-bold">UI/UX Developer Intern</h5>
-                            <p class="text-muted mb-2">Tech Mahindra Foundation</p>
-                            <ul class="list-unstyled">
-                                <li class="mb-2">• Designed responsive web interfaces and layouts using HTML, CSS, and
-                                    JavaScript.</li>
-                                <li class="mb-2">• Created wireframes and prototypes using Figma and Adobe XD.</li>
-                                <li class="mb-2">• Focused on improving user experience (UX) and interface usability.
-                                </li>
-                                <li class="mb-2">• Collaborated with developers to implement designs for real-world
-                                    projects.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h2 class="section-title">Get In Touch</h2>
-                    <p class="lead mb-5">Have a project in mind? Let's work together to bring your ideas to life!</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <div class="contact-form">
-                        <form id="contactForm">
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="name" class="form-label">Name</label>
-                                    <input type="text" class="form-control" id="name" required>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="email" required>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="subject" class="form-label">Subject</label>
-                                <input type="text" class="form-control" id="subject" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Message</label>
-                                <textarea class="form-control" id="message" rows="5" required></textarea>
-                            </div>
-                            <div class="text-center">
-                                <button type="submit" class="btn btn-light btn-lg">Send Message</button>
-                            </div>
-                        </form>
-                        <div id="formMessage" class="mt-3 text-center" style="display: none;"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-md-4 text-center mb-4">
-                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-                        style="width: 60px; height: 60px;">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h5>Address</h5>
-                    <p>Samalkota<br>India</p>
-                </div>
-                <div class="col-md-4 text-center mb-4">
-                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-                        style="width: 60px; height: 60px;">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <h5>Phone</h5>
-                    <p>+91 9398800582</p>
-                </div>
-                <div class="col-md-4 text-center mb-4">
-                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-                        style="width: 60px; height: 60px;">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h5>Email</h5>
-                    <p>ajaykumar298901@gmail.com</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <p class="mb-0">&copy; 2025 Ajay Kumar. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/ajaykumar-tatapudi-b57788244/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-                        <!-- <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a> -->
-                        <a href="https://www.behance.net/tatapudajaykumar" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-behance"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Navbar background change on scroll
-        window.addEventListener('scroll', function () {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('navbar-scrolled');
-            } else {
-                navbar.classList.remove('navbar-scrolled');
-            }
-        });
-
-        // Animate skill bars when they come into view
-        const observerOptions = {
-            threshold: 0.5,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver(function (entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const skillBars = entry.target.querySelectorAll('.skill-progress');
-                    skillBars.forEach(bar => {
-                        const width = bar.getAttribute('data-width');
-                        bar.style.width = width + '%';
-                    });
-                }
-            });
-        }, observerOptions);
-
-        const skillsSection = document.querySelector('#skills');
-        if (skillsSection) {
-            observer.observe(skillsSection);
-        }
-
-        // Contact form handling
-        document.getElementById('contactForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            const formMessage = document.getElementById('formMessage');
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-
-            // Simulate form submission
-            formMessage.innerHTML = `
-                <div class="alert alert-success">
-                    <i class="fas fa-check-circle me-2"></i>
-                    Thank you, ${name}! Your message has been sent successfully. I'll get back to you soon.
-                </div>
-            `;
-            formMessage.style.display = 'block';
-
-            // Reset form
-            this.reset();
-
-            // Hide message after 5 seconds
-            setTimeout(() => {
-                formMessage.style.display = 'none';
-            }, 5000);
-        });
-
-        // Add active class to navigation items based on scroll position
-        window.addEventListener('scroll', function () {
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100;
-                const sectionHeight = section.clientHeight;
-                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === '#' + current) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
-    <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'98ee0eb300e4179b',t:'MTc2MDUxODEwNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
